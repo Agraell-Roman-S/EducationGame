@@ -13,8 +13,8 @@ checkNumber(10);
 checkNumber(-5);
 checkNumber(0);
 
-let day = "wednesday"
-switch (day) {
+let tday = "wednesday"
+switch (tday) {
     case "monday":
         console.log("tooday monnday");
         break;
@@ -55,3 +55,27 @@ function checkNumber2 (arr) {
 let arr2 = [1, 4, 5, 13, -5, 0]
 
 checkNumber2(arr2)
+
+function getDayMessage(day) {
+    switch (day) {
+        case "monday":
+            return "today is Monday";
+        case "tuesday":
+            return "today is Tuesday";
+        case "wednesday":
+            return "today is Wednesday";
+        case "thursday":
+            return "today is Thursday";
+        case "friday":
+            return "today is Friday";
+        case "saturday":
+            return "today is Saturday";
+        case "sunday":
+            return "today is Sunday";
+        default:
+            return "not a day of the week";
+    }
+}
+
+let day = "wednesday";
+console.log(getDayMessage(day));
