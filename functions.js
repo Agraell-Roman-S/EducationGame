@@ -23,3 +23,8 @@ function para(num) {
     }
 }
 console.log(para(16))
+function sumNumbers(...numbers) {
+    
+    return numbers.reduce((acc, curr) => acc + curr, 0);
+  }
+console.log(sumNumbers(1, 4, 445, 18))
