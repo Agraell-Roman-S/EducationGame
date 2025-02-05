@@ -19,3 +19,17 @@ for (let i = 1; i <= 50; i++) {
         console.log(i);
     }
 }
+
+
+for (let i = 1; i <= 100; i++) { 
+    let pNum = true;
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+            pNum = false;
+            break
+        }
+    };
+    if (pNum) {
+        console.log(i);
+    }
+}
