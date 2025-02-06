@@ -10,7 +10,7 @@ function addUser(name, age) {
     for (i = 0; i <= len -1; i++) {
         switch (users[i].name) {
             case name:
-                isFinded = true;
+                isntExists = false;
                 console.log("the user already exists");
                 break;
         }
