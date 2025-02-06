@@ -8,11 +8,12 @@ function addUser(name, age) {
     let len = users.length
     let isntExists = true;
     for (i = 0; i <= len -1; i++) {
-        if (users[i].name == name) {
-            isntExists = false;
-            console.log("the user already exists")
-            break
-        } 
+        switch (users[i].name) {
+            case name:
+                isFinded = true;
+                console.log("the user already exists");
+                break;
+        }
     }
     if (isntExists) {
         let newId = users.length > 0 ? users[users.length - 1].id + 1 : 1;
@@ -34,16 +35,17 @@ function findUserById(idU) {
     let len = users.length
     let isFinded = false;
     for (i = 0; i <= len -1; i++) {
-        if (users[i].id == idU) {
-            isFinded = true;
-            console.log("user with id=" + idU + " : " + users[i].name)
-            break
+        switch (users[i].id) {
+            case idU:
+                isFinded = true;
+                console.log("user with id=" + idU + " : " + users[i].name);
+                break;
         }
     }
     if (!isFinded) {
         console.log("user with id=" + idU + " dont finded")
-    }
-}
+    };
+};
 
 // Тестирование функций
 addUser("Ольга", 27);
