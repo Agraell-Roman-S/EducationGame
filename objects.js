@@ -25,3 +25,10 @@ person.country = "Romania";
 for (let i in person) {
     console.log(`${i}: ${person[i]}`)
 }
+delete person.country
+
+if ("country" in person) {
+    console.log("country isnt deleted")
+} else {
+    console.log("country is deleted")
+}
