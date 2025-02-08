@@ -35,3 +35,6 @@ console.log("Filtering:", serchPrice);
 
 let fullPrice = serchPrice.reduce((sum, i) => {return sum + i.price}, 0);
 console.log("sum prices: ", fullPrice);
+
+let bonusTask = updatedPrices.filter((i) => {return i.price > 50}).reduce((sum, i) => {return sum + i.price}, 0);
+console.log(bonusTask);
