@@ -25,7 +25,9 @@ let fullUser = {...user, ...adress};
 console.log(fullUser);
 
 function multiply(...something) {
-    return something.reduce((acc, j)=>acc * j)
-};
+    return something.length ? something.reduce((acc, j) => acc * j, 1) : 0;
+}
 
-console.log(multiply(1, 6, 4, 3))
+console.log(multiply(1, 6, 4, 3));
+console.log("multiply()")
+console.log(multiply())
