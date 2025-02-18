@@ -45,3 +45,9 @@ newTask
     .catch(err => console.log(err))
     .finally(()=>console.log("finished"));
 
+Promise.allSettled([newTask, asyncTask])
+.then(([resp1, resr2])=>{
+    console.log(resp1),
+    console.log(resr2)
+})
+
