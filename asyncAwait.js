@@ -15,15 +15,15 @@ async function loadWithError() {
     }
 }
 
-loadData();
-loadWithError();
+
+
 
 
 async function newFunc () {
     let foo = await new Promise(resolve => setTimeout(() => resolve("Выполнено!"), 3000));
     console.log(foo);
 };
-newFunc();
+
 
 async function newFuncsec () {
     try {
@@ -42,4 +42,13 @@ async function newFuncsec () {
     }
 }
 
-newFuncsec()
+
+async function fetchAllData() {
+    try {
+        const results = await Promise.all([loadData(), loadWithError(), newFunc(), newFuncsec()]);
+       
+    } catch (error) {
+        console.error("Ошибка при загрузке данных:", error);
+    }
+}
+fetchAllData();
