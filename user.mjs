@@ -1,0 +1,1 @@
+export let objUs = {name: "Alex", age: 11}
