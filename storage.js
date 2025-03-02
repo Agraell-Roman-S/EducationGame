@@ -31,3 +31,5 @@ let howLong = () => {
     let started = JSON.parse(sessionStorage.getItem("timeStarted"));
     console.log(timeNow() - started);
 };
+
+setInterval (howLong, 1000);
