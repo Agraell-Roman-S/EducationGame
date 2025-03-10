@@ -27,9 +27,16 @@ async function getUsers() {
     }
 }
 
-async function getUser(userId){
+let controller = new AbortController();
+let signal = controller.signal;
+setTimeout(() => {
+    controller.abort();
+    console.log("aborting")
+},500)
+
+async function getUser(userId, signal){
     try {
-        let resp = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
+        let resp = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, {signal});
         let result = await resp.json();
         console.log(result)
     }
@@ -85,15 +92,16 @@ async function deleteUser(userId) {
 deleteUser(1);
 
 
+
 let updUser = {name: "Marco 2", email: "marco2@gmail.com"};
 
-async function main() {
+async function main(signal) {
     await getUsers();
     await createUser("Marco", "marco@gmail.com");
     await getUser(11);
     await updateUser(11, updUser);
-    await getUser(9);
+    await getUser(9, signal);
 
 };
 
-main();
+main(signal);
