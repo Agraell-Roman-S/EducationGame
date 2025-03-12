@@ -1,0 +1,41 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.main_div {
+    width: 100%;
+    height: 100vh;
+    background-color: grey;
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.bridge {
+    background-color: white;
+}
+.task_1, .task_2, .task_4, .task_5 {
+    display: flex;
+    gap: 20px;
+    height: 25px;
+    align-items: center;
+    p {
+        margin: 0;
+    }
+    .start_div_task_2 {
+        height: 100%;
+        width: 100px;
+        background-color: brown;
+    }
+    .new_div_task_2 {
+        height: 100%;
+        width: 100px;
+        background-color: blue;
+    }
+    .inp {
+        width: 330px;
+    }
+}
+

@@ -41,7 +41,11 @@ async function getUser(userId, signal){
         console.log(result)
     }
     catch(error) {
-        console.log(error)
+        if (error.name === 'AbortError') {
+            console.log('Запрос getUser был отменен');
+        } else {
+            console.error('Ошибка при выполнении запроса:', error);
+        }
     }
 }
 
