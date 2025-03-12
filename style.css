@@ -34,6 +34,9 @@ body, html {
         width: 100px;
         background-color: blue;
     }
+    .new_div_click {
+        background-color: crimson;
+    }
     .inp {
         width: 330px;
     }

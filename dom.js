@@ -34,3 +34,11 @@ function toggleBackground() {
 }
 
 document.getElementById("btn_task_5").addEventListener("click", toggleBackground)
+
+function targetElement(e) {
+    if (e.target.classList.contains("new_div_task_2")) {
+        e.target.classList.toggle("new_div_click")
+    }
+}
+
+document.querySelector(".task_2").addEventListener("click", targetElement)
