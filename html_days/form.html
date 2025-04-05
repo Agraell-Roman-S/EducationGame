@@ -1,0 +1,36 @@
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Day_21</title>
+                <link rel="stylesheet" href="../style.css">
+            </head>
+            <body>
+                <div class="main_div">
+                    <form action="/submit" method="post">
+
+                        <div  class="custom_input">
+                            <label for="input_name" id="label_name">Name:</label>
+                            <input type="text" id="input_name" name="input1" required>
+                        </div>
+                        <div  class="custom_input">
+                            <label for="input_email">Email:</label>
+                            <input type="email" id="input_email" name="input_email" required>
+                        </div>
+                        <div  class="custom_input">
+                            <label for="input_password" id="label_password"></label>
+                            <input type="password" id="input_password" name="input_password" required>
+                        </div>
+                        <div  class="custom_input">
+                            <label for="input_phone">Phone:</label>
+                            <input type="text" id="input_phone" name="input_phone" required>
+                        </div>
+
+
+                        <button type="submit" id="btn_sbt" disabled>Submit</button>
+                    </form>
+                </div>
+                <script src="../form.js"></script>    
+            </body>
+            </html>

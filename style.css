@@ -54,7 +54,6 @@ body, html {
     .changedColor{
         background-color: cadetblue;
     }
-
 }
 .task_2-20{
     display: flex;
@@ -75,3 +74,26 @@ body, html {
     }
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .custom_input{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        input {
+            width: 300px;
+        }
+    }
+    #btn_sbt {
+        width: 100px;
+        margin-top: 10px;
+    }
+    .rn {
+        border: none;
+    }
+    .rb {
+        border: 1px solid red;
+    }
+}
