@@ -97,3 +97,10 @@ form {
         border: 1px solid red;
     }
 }
+
+.active {
+    color: aqua;
+}
+.output {
+    margin-bottom: 30px;
+}
